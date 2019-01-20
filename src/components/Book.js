@@ -1,22 +1,16 @@
-import React from 'react';
+import React from 'react'
+
 
 const Book = (props) => {
 
-
     return (
-        <div className="card-deck">
-          {props.book.map(book => {
-            return (
-                  <div className="card">
-                    <div className="card-img-top">
-                      <img key={book.id} src={book.coverUrl} alt={book.title}/>
-                    </div>
-                  </div>
-
-            )
-            })
-          }
+      <div className="card">
+        <input className="card-img-top" type="image" src={props.book.coverUrl} alt={props.book.title} onClick={(e)=> props.addToCart(props.book.id)}/>
+        <div className="card-body">
+          <h5 className="card-title">{props.book.title}</h5>
+          <p className="card-text">{props.book.author}</p>
         </div>
+      </div>
     )
 }
 
