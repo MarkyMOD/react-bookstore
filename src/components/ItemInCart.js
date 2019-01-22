@@ -6,7 +6,7 @@ const ItemInCart = (props) => {
     <div className="list-group-item">
       <div className="row">
         <div className="col-md-8">{props.title}</div>
-        <div className="col-md-2">${props.price}</div>
+        <div className="col-md-2">${(props.price).toFixed(2)}</div>
       </div>
     </div>
   )

@@ -8,7 +8,7 @@ const Book = (props) => {
         <input className="card-img-top" type="image" src={props.book.coverUrl} alt={props.book.title} onClick={(e)=> props.addToCart(props.book.id)}/>
         <div className="card-body">
           <h5 className="card-title">{props.book.title}</h5>
-          <p className="card-text">{props.book.author}</p>
+          <p className="card-text">By: {props.book.author}</p>
         </div>
       </div>
     )
